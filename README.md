@@ -1,10 +1,8 @@
-# [releases.antfu.me](https://releases.antfu.me)
+# [releases.leedom.me](https://releases.leedom.me)
 
-A page for Anthony's recent releases.
+A page for Leedom's recent releases.
 
-Deployed via [NuxtHub](https://hub.nuxt.com)
-
-You can fork it to create your own version, or [use this template to deploy a page for your contributions](https://github.com/atinux/my-pull-requests) (instead of releases).
+Thanks to @antfu's [release.antfu.me](https://github.com/antfu/releases.antfu.me)
 
 ## Forks/Variants
 
