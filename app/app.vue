@@ -4,6 +4,7 @@ useDark()
 
 <template>
   <NuxtPage />
+  <ScrollToTop />
 </template>
 
 <style>
