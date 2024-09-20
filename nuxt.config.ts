@@ -45,8 +45,6 @@ export default defineNuxtConfig({
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: `${name}'s recent releases` },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
         { property: 'og:image:alt', content: `${name} is Releasing...` },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:image:alt', content: `${name} is Releasing...` },
