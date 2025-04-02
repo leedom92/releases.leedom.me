@@ -20,7 +20,7 @@ const timeDiffHours = computed(() => {
 const config = useRuntimeConfig()
 
 const subImage = computed(() => {
-  if (!props.item.repo.startsWith(`${config.public.name.toLowerCase()}/`)) {
+  if (!props.item.repo.startsWith(`${config.public.name.toLowerCase()}`)) {
     return ''
   }
   if (logoOverrides[props.item.repo]) {
