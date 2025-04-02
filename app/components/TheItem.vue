@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { formatTimeAgo } from '@vueuse/core'
-import { logoOverrides, subLogosMatch } from '~~/shared/constants'
 import type { ReleaseInfo } from '~~/types'
+import { logoOverrides, subLogosMatch } from '~~/shared/constants'
 
 const props = defineProps<{
   item: ReleaseInfo
@@ -20,7 +20,7 @@ const timeDiffHours = computed(() => {
 const config = useRuntimeConfig()
 
 const subImage = computed(() => {
-  if (!props.item.repo.startsWith(`${config.public.login}/`)) {
+  if (!props.item.repo.startsWith(`${config.public.name.toLowerCase()}/`)) {
     return ''
   }
   if (logoOverrides[props.item.repo]) {
@@ -96,10 +96,15 @@ const HighlightedVersion = defineComponent({
         v-if="subImage"
         border="~ gray/5" absolute bottom--2 right--2 rounded-full bg-gray:5 bg-white p1 dark:bg-hex-121212
       >
+        <img
+          v-if="subImage.includes('://')"
+          :src="subImage" ma h-5 w-5
+          alt="Sub logo"
+        >
         <div
-          border="~ gray/5"
+          v-else
           :class="subImage"
-          h-5 w-5
+          ma h-4.5 w-4.5
         />
       </div>
 
